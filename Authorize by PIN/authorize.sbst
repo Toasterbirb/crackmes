@@ -1,0 +1,18 @@
+# Bypass the argument count check
+inv ; 0x00001393
+
+# Skip the call to sym.decode_pin
+nopi ; 0x000013c8
+
+# Skip the string length checks
+nopi ; 0x000013ea
+nopi ; 0x000013fa
+
+# Don't compare the strings
+nopi ; 0x00001415
+
+# Skip a strlen call
+nopi ; 0x00001425
+
+# Skip the string decoding since we didn't supply a pin
+nopi ; 0x0000146f
