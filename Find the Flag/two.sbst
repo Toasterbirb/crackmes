@@ -1,0 +1,5 @@
+# Don't process the user provided value at all
+jmp ; 0x000011a4 ; 0x000011ba
+
+# Replace the default value with the correct one (11)
+repat ; 0x1199 ; c7 45 ec 0b 00 00 00
