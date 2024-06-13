@@ -1,0 +1,5 @@
+# Skip the argument count check
+nopi ; 0x000011ae
+
+# Skip the password comparison
+nop ; 0x000012d7 ; 9
