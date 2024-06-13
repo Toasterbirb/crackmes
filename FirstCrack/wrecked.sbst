@@ -1,0 +1,9 @@
+# Skip the password string length check
+# and also skip over the error condition
+nopi ; 0x00001b6d
+
+# Don't call the function that validates the password
+nopi ; 0x00001bd5
+
+# Skip the check before the victory message
+nopi ; 0x00001bfc
