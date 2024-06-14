@@ -1,0 +1,18 @@
+# Patch the password comparison in v1
+nopi ; 0x128b ; 2
+
+# Patch the password comparison in v2
+nopi ; 0x1334 ; 2
+
+# Patch the password comparison in v3
+nopi ; 0x13e5 ; 2
+
+# Patch the password comparison in v4
+nopi ; 0x1436 ; 2
+
+# Fix the struct string so that the comparison in the end works
+repat ; 0x1221 ; c6 05 ed 2d 00 00 63
+repat ; 0x13c8 ; c6 05 47 2c 00 00 70
+repat ; 0x141a ; c6 05 f6 2b 00 00 70
+repat ; 0x130f ; c6 00 69
+repat ; 0x1440 ; c6 05 cd 2b 00 00 61 b8 01 00 00 00 90 90 90 90 90 90

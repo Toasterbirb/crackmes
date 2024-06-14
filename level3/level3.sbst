@@ -1,0 +1,11 @@
+# NOTE: This patch only "fixes" the program so that its possible
+# to get through. The other patch with the filename "level3_skip.sbst"
+# patches out the password checks entirely
+
+# Fix a comparison that is made impossible on purpose
+nopi ; 0x130f
+
+# Patch out any mov instructions that set wrong values into a specific struct
+repat ; 0x1221 ; c6 05 ed 2d 00 00 63
+repat ; 0x13c8 ; c6 05 47 2c 00 00 70
+repat ; 0x141a ; c6 05 f6 2b 00 00 70
