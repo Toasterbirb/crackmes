@@ -1,0 +1,6 @@
+# Jump directly to the "test" function
+# to avoid processing the user args or the filename
+jmp ; 0x00001160 ; 0x000011d7
+
+# Invert the check in the test function
+inv ; 0x00001269
