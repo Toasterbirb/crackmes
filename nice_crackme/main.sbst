@@ -1,0 +1,2 @@
+# Don't check if the password is correct
+nopi ; 0x00001372 ; 2
