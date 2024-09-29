@@ -1,0 +1,5 @@
+# make the jump after the check for 'h4x0' unconditional
+jmp ; 0x111c ; 0x1147
+
+# patch the check for 'r'
+nopi ; 0x1151
