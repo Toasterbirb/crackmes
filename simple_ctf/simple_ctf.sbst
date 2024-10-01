@@ -1,0 +1,2 @@
+# nop the instruction that checks if the hashes match
+nopi ; 0x14b0
