@@ -1,0 +1,2 @@
+# disable the encrypted string comparison
+nopi ; 0x000013e0
