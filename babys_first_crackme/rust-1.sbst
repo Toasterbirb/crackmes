@@ -1,0 +1,9 @@
+# remove the key length check by comparing the rax register with itself
+repat ; 0x0000141d ; 48 39 c0 90
+
+# make the program not care about the number value by making the comparison
+# jump into an unconditional one
+jmp ; 0x00001443 ; 0x0000145b
+
+# skip the comparison that checks the last character of the encoded string
+nopi ; 0x0000137b
